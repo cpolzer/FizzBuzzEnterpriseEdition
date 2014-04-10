@@ -2,13 +2,14 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.fact
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.BuzzStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.ITranslatedValueReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
 public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
 	@Override
-	public StringStringReturner createStringStringReturner() {
-		final BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
+	public ITranslatedValueReturner<String> createStringStringReturner() {
+		final ITranslatedValueReturner<String> myBuzzStringReturner = new BuzzStringReturner();
 		return myBuzzStringReturner;
 	}
 

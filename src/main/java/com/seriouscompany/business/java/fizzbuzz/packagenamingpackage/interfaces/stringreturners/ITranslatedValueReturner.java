@@ -1,5 +1,8 @@
+/*
+ * (c) LIDL Stiftung & Co.KG
+ */
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners;
 
-public interface StringStringReturner extends ITranslatedValueReturner<String> {
-
+public interface ITranslatedValueReturner<T> {
+    T getValue();
 }

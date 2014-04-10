@@ -6,16 +6,17 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
  * Our FizzStringReturner.class implementing {@link StringStringReturner}.
  * It's method {@link FizzStringReturner#getReturnString} returns a {@link String} with the content of "Fizz"
  */
-public class FizzStringReturner implements StringStringReturner {
+public class FizzStringReturner extends ATranslatedValueReturner<String> {
+
     /**
      * TODO: 23/12/1998 CP: Check javadoc for typos
      *
      * @return "Fisz"
      */
-    public String getReturnString() {
-        final StringBuilder myStringBuilder = new StringBuilder("Fizz");
+    @Override
+    public String getValue() {
+        final StringBuilder myStringBuilder = new StringBuilder(resourceBundle.getString("fizz"));
         final String myString = myStringBuilder.toString();
         return new String(myString);
     }
-
 }

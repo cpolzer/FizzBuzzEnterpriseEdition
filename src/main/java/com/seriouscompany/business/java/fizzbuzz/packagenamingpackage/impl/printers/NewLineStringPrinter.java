@@ -6,6 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.ITranslatedValueReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
 public class NewLineStringPrinter implements StringPrinter {
@@ -19,9 +20,9 @@ public class NewLineStringPrinter implements StringPrinter {
 
 	public void print() {
 		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
-		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
+		final ITranslatedValueReturner<String> myNewLineStringReturner = myNewLineStringReturnerFactory
 				.createStringStringReturner();
-		final String myNewLineString = myNewLineStringReturner.getReturnString();
+		final String myNewLineString = myNewLineStringReturner.getValue();
 		try {
 			this.outputStrategy.output(myNewLineString);
 		} catch (Exception e) {

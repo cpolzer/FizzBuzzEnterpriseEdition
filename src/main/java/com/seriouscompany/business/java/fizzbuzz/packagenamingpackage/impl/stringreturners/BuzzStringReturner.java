@@ -5,15 +5,15 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 /**
  * Our BuzzStringReturner.class implementing {@link StringStringReturner}.
  */
-public class BuzzStringReturner implements StringStringReturner {
+public class BuzzStringReturner extends ATranslatedValueReturner<String> {
 
     /**
      * @return a <s>{@link StringBuilder}</s> {@link String} with the value of buzz
      */
-    public String getReturnString() {
-        final StringBuilder myStringBuilder = new StringBuilder("Buzz");
+    @Override
+    public String getValue() {
+        final StringBuilder myStringBuilder = new StringBuilder(resourceBundle.getString("buzz"));
         final String myString = myStringBuilder.toString();
         return new String(myString);
     }
-
 }
