@@ -2,12 +2,18 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stri
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Our BuzzStringReturner.class implementing {@link StringStringReturner}.
+ */
 public class BuzzStringReturner implements StringStringReturner {
 
-	public String getReturnString() {
-		final StringBuilder myStringBuilder = new StringBuilder("Buzz");
-		final String myString = myStringBuilder.toString();
-		return new String(myString);
-	}
-	
+    /**
+     * @return a <s>{@link StringBuilder}</s> {@link String} with the value of buzz
+     */
+    public String getReturnString() {
+        final StringBuilder myStringBuilder = new StringBuilder("Buzz");
+        final String myString = myStringBuilder.toString();
+        return new String(myString);
+    }
+
 }
